@@ -27,6 +27,10 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 
 # DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom-caf/common \
+    hardware/qcom-caf/sm6225
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
