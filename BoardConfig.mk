@@ -91,7 +91,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := false
 BOARD_INCLUDE_DTB_IN_VENDOR_BOOT := true
 
 # Headers
-TARGET_SPECIFIC_HEADER_PATH := $(KERNEL_PATH)/kernel-headers
+TARGET_SPECIFIC_HEADER_PATH := hardware/qcom-caf/common/os_pickup
 TARGET_NO_KERNEL_OVERRIDE := true
 
 # GKI & Modules (Verified for 5.15.178)
