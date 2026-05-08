@@ -1,0 +1,70 @@
+#
+# Copyright (C) 2026 The LineageOS Project
+#
+# Hardware-level configuration for Xiaomi POCO M7 4G (Creek)
+#
+
+on early-init
+    # Set high loglevel for early debugging of HAL startup
+    loglevel 7
+
+on init
+    # Configure the kernel to allow recovery of the CNSS (Connectivity) subsystem
+    write /sys/kernel/cnss/recovery 1
+    
+    # Generic environment setup for system binaries
+    export ANDROID_BOOTLOGO 1
+    export ANDROID_ROOT /system
+    export ANDROID_ASSETS /system/app
+    export ANDROID_DATA /data
+    export EXTERNAL_STORAGE /sdcard
+
+on fs
+    # Mount partitions based on your device's fstab
+    mount_all /vendor/etc/fstab.default --early
+
+on post-fs
+    # Update model property once the filesystem is ready
+    setprop ro.vendor.ltalabel.model ${vendor.radio.ltalabel.model}
+
+on post-fs-data
+    # Required for logd to start writing to /data
+    mkdir /data/log 0770 root log
+    
+    # Create directory for proprietary Xiaomi Inter-Component communication
+    mkdir /data/vendor/mi_ic 2771 root log
+    
+    # Wi-Fi APEX data migration and permissions (Essential for Android 15+)
+    mkdir /data/misc/apexdata/com.android.wifi 0770 wifi wifi
+    restorecon_recursive /data/misc/apexdata/com.android.wifi
+
+on boot
+    # Start the standard Android service managers for AIDL/HIDL
+    start servicemanager
+    start hwservicemanager
+    
+    # Enable smart charging and set permissions if the kernel supports it
+    wait /sys/class/battchg_ext/smart_charging_activation
+    write /sys/class/battchg_ext/smart_charging_activation 1
+    chown system system /sys/class/battchg_ext/smart_charging_interruption
+    
+    # Touch framerate node permissions for smoother UI[cite: 1]
+    chown system system /sys/devices/virtual/input/lxs_ts_input/frame_rate_np
+    chmod 0664 /sys/devices/virtual/input/lxs_ts_input/frame_rate_np
+
+on property:sys.boot_completed=1
+    # Enable ZRAM for better RAM management on 4G/6G devices[cite: 1]
+    swapon_all /vendor/etc/fstab.zram
+
+# Generic AIDL/HIDL services that belong in hardware init[cite: 1]
+service wificond /system/bin/wificond
+    class main
+    user wifi
+    group wifi net_raw net_admin
+
+service storaged /system/bin/storaged
+    class main
+    capabilities DAC_READ_SEARCH
+    priority 10
+    user root
+    group package_info

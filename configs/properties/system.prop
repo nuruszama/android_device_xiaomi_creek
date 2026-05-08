@@ -1,0 +1,9 @@
+# Display
+ro.sf.lcd_density=440
+
+# ADB / Debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+
+# Graphics
+ro.opengles.version=196610

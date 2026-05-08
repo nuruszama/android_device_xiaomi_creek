@@ -1,0 +1,15 @@
+<manifest version="1.0" type="device">
+<!---/*************************************************************************
+* Copyright (c) Qualcomm Technologies, Inc.
+* All Rights Reserved.
+* Confidential and Proprietary - Qualcomm Technologies, Inc.
+****************************************************************************-->
+
+    <!-- Trusted UI HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.trustedui</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::ITrustedUI/default</fqname>
+        <fqname>@1.1::ITrustedInput/default</fqname>
+    </hal>
+</manifest>
