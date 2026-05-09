@@ -7,10 +7,6 @@
 # Add common definitions for Qualcomm
 # $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# Inherit from common AOSP 64-bit phone config
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system.mk)
-
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
