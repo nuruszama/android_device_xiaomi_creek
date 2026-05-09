@@ -110,9 +110,6 @@ PRODUCT_COPY_FILES += \
 # Qualcomm Vibrator Configurations
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
-# Qualcomm IPACM Configurations
-$(call inherit-product, vendor/qcom/opensource/data/ipacm_vendor_product.mk)
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-V1-ndk.vendor \
