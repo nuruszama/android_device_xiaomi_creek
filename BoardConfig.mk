@@ -20,6 +20,7 @@ BUILD_BROKEN_MISSING_PGO_STATS := true
 
 # Tell the build system to ignore missing dexpreopt artifacts
 DISABLE_DEXPREOPT_CHECK := true
+WITH_DEXPREOPT := false
 
 # Primary Architecture (64-bit)
 TARGET_ARCH := arm64
