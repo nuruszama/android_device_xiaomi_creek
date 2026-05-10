@@ -7,9 +7,10 @@
 DEVICE_PATH := device/xiaomi/creek
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
-# Android 16 Build Environment
-SOONG_ALLOW_MISSING_DEPENDENCIES := true
+# Shipping API (Android 15 for Creek)
+BOARD_API_LEVEL := 35
 BOARD_SHIPPING_API_LEVEL := 35
+PRODUCT_SHIPPING_API_LEVEL := 35
 
 # Broken Rules (Required for blob compatibility) 
 BUILD_BROKEN_DUP_RULES := true
@@ -21,6 +22,9 @@ BUILD_BROKEN_MISSING_PGO_STATS := true
 # Tell the build system to ignore missing dexpreopt artifacts
 DISABLE_DEXPREOPT_CHECK := true
 WITH_DEXPREOPT := false
+
+# Allow SOONG missing dependencies
+SOONG_ALLOW_MISSING_DEPENDENCIES := true
 
 # Primary Architecture (64-bit)
 TARGET_ARCH := arm64
