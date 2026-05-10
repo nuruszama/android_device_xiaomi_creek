@@ -213,10 +213,8 @@ DEVICE_MATRIX_FILE += \
 
 # Inherit Qualcomm and Xiaomi common policies
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-#include device/xiaomi/sepolicy/SEPolicy.mk
 
 # Custom creek-specific policies
-#BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/dynamic
 #BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 #SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 #SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
