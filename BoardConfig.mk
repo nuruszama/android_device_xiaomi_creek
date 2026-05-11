@@ -8,7 +8,6 @@ DEVICE_PATH := device/xiaomi/creek
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 # Shipping API (Android 15 for Creek)
-BOARD_API_LEVEL := 35
 BOARD_SHIPPING_API_LEVEL := 35
 
 # Broken Rules (Required for blob compatibility) 
