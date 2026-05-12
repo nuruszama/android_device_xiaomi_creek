@@ -5,8 +5,8 @@
 #
 
 # Inherit from common AOSP 64-bit phone config
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from LineageOS common configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
@@ -14,9 +14,15 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from creek device
 $(call inherit-product, device/xiaomi/creek/device.mk)
 
+
+# Include our private certificate
+#-include vendor/lineage-priv/keys/keys.mk
+
+# Gapps
+#-include vendor/gapps/arm64/arm64-vendor.mk
+
 # Basic identifiers
 PRODUCT_NAME := lineage_creek
-LINEAGE_BUILDTYPE := UNOFFICIAL
 PRODUCT_DEVICE := creek
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -27,6 +33,7 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 # Device configs
 TARGET_BOOT_ANIMATION_RES = 1080
+#WITH_GMS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
