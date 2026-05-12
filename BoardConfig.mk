@@ -252,8 +252,8 @@ DEVICE_MATRIX_FILE += \
     hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Inherit Qualcomm and Xiaomi common policies
-#include device/qcom/sepolicy_vndr/SEPolicy.mk
-#include device/xiaomi/sepolicy/SEPolicy.mk
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/xiaomi/sepolicy/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
