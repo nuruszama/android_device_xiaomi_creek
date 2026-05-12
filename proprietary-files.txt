@@ -774,7 +774,6 @@ vendor/firmware/a730_zap.b02
 vendor/firmware/a730_zap.elf
 vendor/firmware/a730_zap.mbn
 vendor/firmware/a730_zap.mdt
-vendor/firmware/fs1815.fsm
 vendor/firmware/gmu_gen70000.bin
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
@@ -810,7 +809,6 @@ vendor/etc/apdr.conf
 vendor/etc/batching.conf
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/gps.conf
-vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/init.time_daemon.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/init/qseecomd.rc
@@ -1077,7 +1075,6 @@ vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
 vendor/etc/media_khaje_v0/video_system_specs.json
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
-vendor/etc/vintf/manifest/c2_manifest_vendor_sapphire.xml:vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/lib64/android.hardware.media.c2@1.0.so
 vendor/lib64/libmediautils_vendor.so
 vendor/lib64/libmmosal_vendor.so
@@ -1348,7 +1345,6 @@ vendor/etc/qcril_database/upgrade/config/18.0_config.sql
 vendor/etc/qcril_database/upgrade/config/19.0_config.sql
 vendor/etc/qcril_database/upgrade/config/20.0_config.sql
 vendor/etc/qcril_database/upgrade/config/21.0_config.sql
-vendor/etc/qcril_database/upgrade/config/6.0_config.sql
 vendor/etc/qcril_database/upgrade/config/7.0_config.sql
 vendor/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/15_version_update_ecc_table.sql
@@ -1557,20 +1553,9 @@ vendor/etc/sensors/config/bengal_qrd_lsm6dso_0.json
 vendor/etc/sensors/config/bengal_qrd_tmd2725.json
 vendor/etc/sensors/config/bengal_tmd2725.json
 vendor/etc/sensors/config/dynamic_sensors.json
-vendor/etc/sensors/config/holi_tmd2755_0.json
-vendor/etc/sensors/config/icm4x6x.json
-vendor/etc/sensors/config/kona_qmc630x_0.json
-vendor/etc/sensors/config/kona_qmc630x_1.json
-vendor/etc/sensors/config/lahaina_mmc56x3x_0.json
-vendor/etc/sensors/config/lahaina_mmc56x3x_1.json
-vendor/etc/sensors/config/msmnile_bmi3x0_0.json
-vendor/etc/sensors/config/msmnile_icm4x6x.json
-vendor/etc/sensors/config/sdm845_sip3517.json
-vendor/etc/sensors/config/sdm845_sx932x_0.json
 vendor/etc/sensors/config/sns_amd.json
 vendor/etc/sensors/config/sns_amd_sw_disabled.json
 vendor/etc/sensors/config/sns_amd_sw_enabled.json
-vendor/etc/sensors/config/sns_aod.json
 vendor/etc/sensors/config/sns_aont.json
 vendor/etc/sensors/config/sns_basic_gestures.json
 vendor/etc/sensors/config/sns_bring_to_ear.json
@@ -1594,18 +1579,15 @@ vendor/etc/sensors/config/sns_heart_rate.json
 vendor/etc/sensors/config/sns_mag_cal.json
 vendor/etc/sensors/config/sns_mag_cal_legacy.json
 vendor/etc/sensors/config/sns_multishake.json
-vendor/etc/sensors/config/sns_nonui.json
 vendor/etc/sensors/config/sns_pedometer.json
 vendor/etc/sensors/config/sns_rmd.json
 vendor/etc/sensors/config/sns_rotv.json
-vendor/etc/sensors/config/sns_sar_algo.json
 vendor/etc/sensors/config/sns_smd.json
 vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
 vendor/etc/sensors/config/sns_tilt_sw_enabled.json
 vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/sns_wrist_pedo.json
-vendor/etc/sensors/config/sx932x_0.json
 vendor/etc/sensors/sns_reg_config
 
 # Servicetracker
@@ -1633,22 +1615,8 @@ vendor/bin/mi_thermald
 vendor/etc/init/init.mi_thermald.rc
 
 # Thermal configs
-vendor/etc/thermal-camera.conf
-vendor/etc/thermal-chg-only.conf
-vendor/etc/thermal-class0.conf
 vendor/etc/thermal-engine.conf
-vendor/etc/thermal-hp-mgame.conf
-vendor/etc/thermal-hp-normal.conf
 vendor/etc/thermal-map.conf
-vendor/etc/thermal-mgame.conf
-vendor/etc/thermal-navigation.conf
-vendor/etc/thermal-nolimits.conf
-vendor/etc/thermal-normal.conf
-vendor/etc/thermal-phone.conf
-vendor/etc/thermal-tgame.conf
-vendor/etc/thermal-video.conf
-vendor/etc/thermal-videochat.conf
-vendor/etc/thermal-yuanshen.conf
 vendor/etc/thermald-devices.conf
 
 # Time
