@@ -112,7 +112,6 @@ vendor/etc/backend_conf.xml
 vendor/etc/card-defs.xml
 vendor/etc/microphone_characteristics.xml
 vendor/etc/mixer_paths_bengal_idp.xml
-vendor/etc/mixer_paths_bengal_idp_india.xml
 vendor/etc/mixer_paths_bengal_qrd.xml
 vendor/etc/mixer_paths_scubaidp.xml
 vendor/etc/mixer_paths_scubaqrd.xml
@@ -135,8 +134,6 @@ vendor/etc/init/vendor.qti.battery_stats.rc
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
-system_ext/lib64/vendor.qti.hardware.btconfigstore@1.0.so
-system_ext/lib64/vendor.qti.hardware.btconfigstore@2.0.so
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -451,123 +448,16 @@ vendor/lib64/libwa_rtdof.so
 vendor/lib64/libxmi_high_dynamic_range.so
 
 # Camera configs
-odm/etc/camera/camerabooster.json
-vendor/etc/camera/104_Meet.png
-vendor/etc/camera/108_NorthernEurope.png
-vendor/etc/camera/109_Rome.png
 vendor/etc/camera/110_BlackGold.png
-vendor/etc/camera/121_BBP.png
-vendor/etc/camera/122_Mysterious.png
-vendor/etc/camera/123_GreenOrange.png
-vendor/etc/camera/124_SummerDay.png
-vendor/etc/camera/125_Latin.png
-vendor/etc/camera/126_Fantasy.png
-vendor/etc/camera/127_DustDream.png
-vendor/etc/camera/128_MongKok.png
-vendor/etc/camera/LDC_packdata_xiaomi_M7_AAC_3264x2448_20220901.dat
-vendor/etc/camera/LDC_packdata_xiaomi_M7_Ofilm_3264x2448_20220608.dat
-vendor/etc/camera/aivsModels1
-vendor/etc/camera/aivsParams
-vendor/etc/camera/aivsParams2
-vendor/etc/camera/cache_AncSuperNightLite
 vendor/etc/camera/camxoverridesettings.txt
-vendor/etc/camera/com.xiaomi.dcal.wu.golden
-vendor/etc/camera/dof_mecp.bin
-vendor/etc/camera/dualcam_bokeh_params.json
-vendor/etc/camera/golden_aac_s5khm6_wide_ii.bin
-vendor/etc/camera/golden_ofilm_s5kjn1_wide_ii.bin
-vendor/etc/camera/golden_semco_s5khm6_wide_i.bin
-vendor/etc/camera/golden_sunny_s5kjn1_wide_i.bin
-vendor/etc/camera/intsense_config_singlebokeh.bin
-vendor/etc/camera/libalfpc_tuning_20181222.bin
-vendor/etc/camera/model/dof_model/capture_cache
-vendor/etc/camera/model/dof_model/capture_model
-vendor/etc/camera/model/dof_model/capture_policy
-vendor/etc/camera/model/rt_model/preview_cache
-vendor/etc/camera/model/rt_model/preview_model
-vendor/etc/camera/model/rt_model/preview_policy
 vendor/etc/camera/model_ai_dxo.dlc
 vendor/etc/camera/model_back.dlc
 vendor/etc/camera/model_front.dlc
 vendor/etc/camera/model_glass.dlc
 vendor/etc/camera/model_indoor.dlc
-vendor/etc/camera/morphoVideoEIS.bin
-vendor/etc/camera/morphoVideoEIS_FRONT_S3.bin
-vendor/etc/camera/morpho_image_refiner_tuning_params_aac_gc16b3c_front_global_hdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_aac_gc16b3c_front_global_llhdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_aac_ov16a1q_front_global_hdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_aac_ov16a1q_front_global_llhdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_aac_s5k4h7_ultra_global_hdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_aac_s5k4h7_ultra_global_llhdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_aac_s5khm6_wide_global_hdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_aac_s5khm6_wide_global_llhdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_ofilm_gc16b3c_front_global_hdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_ofilm_gc16b3c_front_global_llhdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_ofilm_ov16a1q_front_global_hdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_ofilm_ov16a1q_front_global_llhdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_ofilm_s5k4h7_ultra_global_hdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_ofilm_s5k4h7_ultra_global_llhdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_semco_s5khm6_wide_global_hdr.xml
-vendor/etc/camera/morpho_image_refiner_tuning_params_semco_s5khm6_wide_global_llhdr.xml
-vendor/etc/camera/morpho_ldc_aac_s5k4h7_ultra_global.bin
-vendor/etc/camera/morpho_ldc_ofilm_s5k4h7_ultra_global.bin
-vendor/etc/camera/morpho_ldc_p_aac_s5k4h7_ultra_global.bin
-vendor/etc/camera/morpho_ldc_p_ofilm_s5k4h7_ultra_global.bin
-vendor/etc/camera/morpho_mfnr_aac_gc16b3c_front_global.xml
-vendor/etc/camera/morpho_mfnr_aac_gc16b3c_front_global_hdr.xml
-vendor/etc/camera/morpho_mfnr_aac_gc16b3c_front_global_third.xml
-vendor/etc/camera/morpho_mfnr_aac_ov16a1q_front_global.xml
-vendor/etc/camera/morpho_mfnr_aac_ov16a1q_front_global_hdr.xml
-vendor/etc/camera/morpho_mfnr_aac_ov16a1q_front_global_third.xml
-vendor/etc/camera/morpho_mfnr_aac_s5k4h7_ultra_global.xml
-vendor/etc/camera/morpho_mfnr_aac_s5k4h7_ultra_global_flash.xml
-vendor/etc/camera/morpho_mfnr_aac_s5k4h7_ultra_global_third.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_1X.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_2X.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_4X.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_6X.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_ISZ_1X.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_ISZ_2X.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_ISZ_4X.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_ISZ_6X.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_flash.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_hdr.xml
-vendor/etc/camera/morpho_mfnr_aac_s5khm6_wide_global_third.xml
-vendor/etc/camera/morpho_mfnr_aac_sc202pcs_macro_global.xml
-vendor/etc/camera/morpho_mfnr_aac_sc202pcs_macro_global_flash.xml
-vendor/etc/camera/morpho_mfnr_aac_sc202pcs_macro_global_third.xml
-vendor/etc/camera/morpho_mfnr_ofilm_gc16b3c_front_global.xml
-vendor/etc/camera/morpho_mfnr_ofilm_gc16b3c_front_global_hdr.xml
-vendor/etc/camera/morpho_mfnr_ofilm_gc16b3c_front_global_third.xml
-vendor/etc/camera/morpho_mfnr_ofilm_ov16a1q_front_global.xml
-vendor/etc/camera/morpho_mfnr_ofilm_ov16a1q_front_global_hdr.xml
-vendor/etc/camera/morpho_mfnr_ofilm_ov16a1q_front_global_third.xml
-vendor/etc/camera/morpho_mfnr_ofilm_s5k4h7_ultra_global.xml
-vendor/etc/camera/morpho_mfnr_ofilm_s5k4h7_ultra_global_flash.xml
-vendor/etc/camera/morpho_mfnr_ofilm_s5k4h7_ultra_global_third.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_1X.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_2X.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_4X.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_6X.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_ISZ_1X.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_ISZ_2X.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_ISZ_4X.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_ISZ_6X.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_flash.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_hdr.xml
-vendor/etc/camera/morpho_mfnr_semco_s5khm6_wide_global_third.xml
-vendor/etc/camera/morpho_mfnr_sunny_sc202pcs_macro_global.xml
-vendor/etc/camera/morpho_mfnr_sunny_sc202pcs_macro_global_flash.xml
-vendor/etc/camera/morpho_mfnr_sunny_sc202pcs_macro_global_third.xml
-vendor/etc/camera/preview_bokeh_params.json
 vendor/etc/camera/resources/TStools_default_param.json
 vendor/etc/camera/resources/default_param.json
-vendor/etc/camera/resources/kernel/32/s31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
-vendor/etc/camera/resources/kernel/64/s31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
 vendor/etc/camera/resources/model/2722133617
-vendor/etc/camera/resources/model/models.mbundle
 vendor/etc/camera/resources/render/BuildIn/Material/1166466556_252005700
 vendor/etc/camera/resources/render/BuildIn/Material/1166466556_2571257293
 vendor/etc/camera/resources/render/BuildIn/Material/1166466556_4025145477
@@ -689,7 +579,6 @@ vendor/etc/camera/resources/render/Config/config_mode_rear.json
 vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/0_Spotless/FaceMask.bin
 vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/0_Spotless/effect.json
 vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/BeautyMap.bin
-vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/FaceMask.bin
 vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/effect_capture.json
 vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/effect_preview.json
 vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/FaceMask.bin
@@ -712,8 +601,6 @@ vendor/etc/camera/resources/render/Effect/40_FaceStereo/mode_front.json
 vendor/etc/camera/resources/render/Effect/50_SkinTone/Effects/0_ModeFront/effect.json
 vendor/etc/camera/resources/render/Effect/50_SkinTone/Effects/0_ModeFront/filter.bin
 vendor/etc/camera/resources/render/Effect/50_SkinTone/mode_front.json
-vendor/etc/camera/resources/render/Effect/5_DLRetouch/mode_front.json
-vendor/etc/camera/resources/render/Effect/5_DLRetouch/mode_rear.json
 vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/Eyebrow.bin
 vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/effect_capture.json
 vendor/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeFront/effect_preview.json
@@ -737,15 +624,6 @@ vendor/etc/camera/resources/truesight_config_rear.json
 vendor/etc/camera/resources/truesight_param.json
 vendor/etc/camera/resources/truesight_param_debug.json
 vendor/etc/camera/sceneDetection.xml
-vendor/etc/camera/sg_cap_cache
-vendor/etc/camera/sg_cap_model
-vendor/etc/camera/sg_cap_policy
-vendor/etc/camera/sg_pre_model
-vendor/etc/camera/siq_ocl_cache_AncSuperNightLite
-vendor/etc/camera/superiq_model_AncSuperNightLite
-vendor/etc/camera/vidhance_calibration
-vendor/etc/camera/vidhance_kernel1.bin
-vendor/etc/camera/vidhance_kernel2.bin
 vendor/etc/camera/xiaomi/dualbokehsnapshot.json
 vendor/etc/camera/xiaomi/frontbokehsnapshot.json
 vendor/etc/camera/xiaomi/frontsinglesnapshot.json
@@ -904,10 +782,7 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/etc/SVIConfig.xml
 
 # Display configs
-vendor/etc/mdss_dsi_panel_m7_38_0c_0b_fhdp_video_mi.xml
-vendor/etc/mdss_dsi_panel_n7_38_0c_0a_fhdp_video_mi.xml
-vendor/etc/qdcm_calib_data_m7_38_0c_0b_video_mode_fhdp_dsi_panel.xml
-vendor/etc/qdcm_calib_data_n7_38_0c_0a_video_mode_fhdp_dsi_panel.xml
+
 
 # Displayfeature
 vendor/bin/displayfeature
@@ -920,8 +795,6 @@ vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
 # ESEPower Manager
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/libesepmconfig.so
 vendor/lib64/libesesbprovision.so
@@ -943,9 +816,6 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/libfastcvdsp_stub.so
 
 # Fingerprint
-odm/lib64/hw/fingerprint.fpc_fod.default.so
-odm/lib64/hw/fingerprint.goodix_fod.default.so
-odm/lib64/libgf_hal.so
 system_ext/lib64/vendor.qti.hardware.fingerprint@1.0.so
 system_ext/lib64/vendor.xiaomi.hardware.fingerprintextension-V1-ndk.so
 system_ext/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
@@ -953,8 +823,7 @@ vendor/lib64/libmifpext.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # Firmware touch
-odm/firmware/Conf_MultipleTest_ft3519t.ini
-odm/firmware/focaltech_ts_fw_samsung_ft3519t.bin
+
 
 # Firmware vendor
 vendor/firmware/a610_zap.b00
@@ -1022,7 +891,6 @@ vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/etc/apdr.conf
 vendor/etc/batching.conf
-vendor/etc/gnss_antenna_info.conf
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/gps.conf
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
@@ -1193,7 +1061,6 @@ vendor/lib64/vendor.qti.latency@2.2.so
 
 # IMS (system)
 system/lib64/vendor.qti.diaghal-V1-ndk.so
-system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/priv-app/QtiTelephony/QtiTelephony.apk;REQUIRED=QtiTelephonyCompat
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
@@ -1333,8 +1200,6 @@ vendor/etc/media_profiles_khaje_iot.xml
 vendor/lib64/libvmmem.so
 
 # NFC
-vendor/bin/STFlashTool
-vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/st21nfc_conf.txt
 vendor/lib64/libstfactory-vendor.so
@@ -1492,7 +1357,6 @@ system/lib64/libprotobuf-cpp-lite.so:system_ext/lib64/libprotobuf-cpp-lite-fromv
 vendor/bin/qmipriod
 vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
-vendor/etc/sdr_config.cfg
 vendor/etc/sec_config
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
@@ -1773,9 +1637,7 @@ vendor/etc/sensors/config/agatti_qrd_ak991x_0.json
 vendor/etc/sensors/config/agatti_qrd_lsm6dso_0.json
 vendor/etc/sensors/config/agatti_qrd_tmd2725.json
 vendor/etc/sensors/config/agatti_tmd2725.json
-vendor/etc/sensors/config/bengal_adux1050_0.json
 vendor/etc/sensors/config/bengal_ak991x_0.json
-vendor/etc/sensors/config/bengal_ak991x_1.json
 vendor/etc/sensors/config/bengal_bmp285_0.json
 vendor/etc/sensors/config/bengal_bu52053nvx_0.json
 vendor/etc/sensors/config/bengal_default_sensors.json
@@ -1786,7 +1648,6 @@ vendor/etc/sensors/config/bengal_qrd_ak991x_0.json
 vendor/etc/sensors/config/bengal_qrd_lsm6dso_0.json
 vendor/etc/sensors/config/bengal_qrd_tmd2725.json
 vendor/etc/sensors/config/bengal_tmd2725.json
-vendor/etc/sensors/config/bmi3x0_0.json
 vendor/etc/sensors/config/dynamic_sensors.json
 vendor/etc/sensors/config/holi_tmd2755_0.json
 vendor/etc/sensors/config/icm4x6x.json
@@ -1908,8 +1769,6 @@ vendor/lib64/libsi.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Trusted User Interface
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/libSecureUILib.so
 vendor/lib64/libloadtrusteduiapp.so
 vendor/lib64/libsecureui.so
