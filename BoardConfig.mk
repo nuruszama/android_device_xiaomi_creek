@@ -225,17 +225,11 @@ TARGET_VENDOR_PROP = $(DEVICE_PATH)/configs/properties/vendor.prop
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/vintf/manifest.xml \
     $(DEVICE_PATH)/configs/vintf/network_manifest.xml
-
-DEVICE_MANIFEST_FILE += \
-    $(wildcard $(DEVICE_PATH)/configs/vintf/manifest/*.xml)
-
 DEVICE_FRAMEWORK_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
-
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml \
     hardware/lineage/interfaces/compatibility_matrices/compatibility_matrix.lineage.xml    
-
 DEVICE_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml \
     hardware/qcom-caf/common/compatibility_matrix.xml
