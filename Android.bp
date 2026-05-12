@@ -1,4 +1,0 @@
-soong_namespace {
-    imports: [
-    ],
-}

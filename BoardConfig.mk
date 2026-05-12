@@ -7,9 +7,6 @@
 DEVICE_PATH := device/xiaomi/creek
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
-# Shipping API (Android 15 for Creek)
-BOARD_SHIPPING_API_LEVEL := 35
-
 # Broken Rules (Required for blob compatibility) 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -38,9 +35,10 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Boot control
-SOONG_CONFIG_NAMESPACES += ufsbsg
-SOONG_CONFIG_ufsbsg += ufsframework
-SOONG_CONFIG_ufsbsg_ufsframework := bsg
+$(call soong_config_set, ufsbsg, ufsframework, bsg)
+
+# Camera
+$(call soong_config_set_bool, camera, override_format_from_reserved, true)
 
 # Platform
 TARGET_BOARD_PLATFORM := bengal
@@ -76,12 +74,18 @@ BOARD_PREBUILT_DTBIMAGE_FILE := $(KERNEL_PATH)/dtbs/dtb.img
 PRODUCT_COPY_FILES += \
     $(BOARD_PREBUILT_DTBIMAGE_FILE):dtb.img
   
-# Basic kernel cmdline (keep minimal)
+# Basic kernel cmdline
 BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200n8 \
     androidboot.hardware=qcom \
-    mtdoops.fingerprint=creek:13/OS3.0.10.0.WBOMIXM:user \
-    androidboot.selinux=permissive
+    androidboot.selinux=permissive \
+    rcu_nocbs=all \
+    rcu_normal=1 \
+    rcu_expedited=1 \
+    kasan=off \
+    mtdoops.fingerprint=creek:13/OS3.0.10.0.WBOMIXM:user
+#    qcom_geni_serial.con_enabled=0 # uncomment when device boots successfully.
+
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -139,6 +143,9 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 TARGET_USERIMAGES_USE_EXT4 := true  # Support for fallback / tooling
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
+
 # EROFS Config
 BOARD_EROFS_PAGESIZE := 4096
 BOARD_EROFS_PCLUSTER_SIZE := 262144
@@ -159,6 +166,17 @@ BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 0x00800000
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 0x06000000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x06400000
 BOARD_FLASH_BLOCK_SIZE := 262144
+
+# Global LTO
+TARGET_GLOBAL_LTO := thin
+TARGET_GLOBAL_OPTIMIZATION := O3
+TARGET_GLOBAL_THINLTO := true
+
+#Enable PD locater/notifier
+TARGET_PD_SERVICE_ENABLED := true
+
+#Enable peripheral manager
+TARGET_PER_MGR_ENABLED := true
 
 # Security
 BOOT_SECURITY_PATCH := 2026-01-05
@@ -209,7 +227,6 @@ BOARD_AVB_VENDOR_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 
 # Safe Recovery / Fastbootd
-BOARD_HAS_RECOVERY_PARTITION := true
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.default
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
@@ -236,11 +253,10 @@ DEVICE_MATRIX_FILE += \
 
 # Inherit Qualcomm and Xiaomi common policies
 #include device/qcom/sepolicy_vndr/SEPolicy.mk
-
-# Custom creek-specific policies
-#BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-#SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-#SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+#include device/xiaomi/sepolicy/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Ignore neverallow violations for initial bring-up on creek
 SELINUX_IGNORE_NEVERALLOWS := true
