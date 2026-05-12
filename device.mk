@@ -24,7 +24,7 @@ PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Inherit from the proprietary vendor version
-# $(call inherit-product, vendor/xiaomi/creek/creek-vendor.mk)
+$(call inherit-product, vendor/xiaomi/creek/creek-vendor.mk)
 
 # Basic Android configs
 PRODUCT_AAPT_CONFIG := normal
