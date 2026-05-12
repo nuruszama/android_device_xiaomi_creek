@@ -25,4 +25,12 @@ PRODUCT_MODEL := POCO M7 4G
 # AudioFX
 TARGET_EXCLUDES_AUDIOFX := true
 
+# Device configs
+TARGET_BOOT_ANIMATION_RES = 1080
+TARGET_HAS_UDFPS := true
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="creek_p_global-user 16 BP2A.250605.031.A3 OS3.0.10.0.WBOMIXM release-keys" \
+    BuildFingerprint="POCO/creek_p_global/creek:16/BP2A.250605.031.A3/OS3.0.10.0.WBOMIXM:user/release-keys"
