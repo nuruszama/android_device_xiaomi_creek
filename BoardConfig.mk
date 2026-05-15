@@ -44,6 +44,7 @@ $(call soong_config_set_bool, camera, override_format_from_reserved, true)
 TARGET_BOARD_PLATFORM := bengal
 TARGET_BOARD_SUFFIX := _515
 TARGET_BOOTLOADER_BOARD_NAME := bengal
+BOARD_USES_QCOM_HARDWARE := true
 
 # Partition Mapping
 TARGET_COPY_OUT_VENDOR := vendor
