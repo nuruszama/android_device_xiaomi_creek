@@ -27,7 +27,6 @@ def blob_fixup_test_flag(
         f.seek(1337)
         f.write(b'\x01')
 
-
 blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/android.hardware.security.keymint-service-qti', 'vendor/lib64/libqtikeymint.so'): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
@@ -56,17 +55,13 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
-    'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
-        .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-fromvendor.so'),
-    'system_ext/lib64/libprotobuf-cpp-full-fromvendor.so': blob_fixup()
-        .replace_needed('libprotobuf-cpp-lite.so','libprotobuf-cpp-lite-fromvendor.so'),
 }
 
 module = ExtractUtilsModule(
-    'sapphire',
+    'creek',
     'xiaomi',
     blob_fixups=blob_fixups,
-    check_elf=False,
+    check_elf = False,
 )
 
 if __name__ == '__main__':
